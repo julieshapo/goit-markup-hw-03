@@ -1,0 +1,242 @@
+:root {
+  --header-bg: #ffffff;
+  --header-frame: #ececec;
+  --logo-black: #000000;
+  --primary-text-color: #757575;
+  --secondary-text-color: #212121;
+  --accent-color: #2196f3;
+  /* --figma-bg: #f5f5f5; */
+  --secondary-bg: #f5f4fa;
+  --container-bg: #eeeeee;
+  --footer-bg: #2f303a;
+  --text-footer-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  background-color: var(--header-bg);
+  color: var(--primary-text-color);
+
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+/* класи утиліти */
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* хедер */
+.header {
+  background-color: var(--header-bg);
+}
+
+/* логотип */
+
+.logo {
+  font-family: Raleway, sans-serif;
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-black {
+  color: var(--logo-black);
+}
+
+.logo-white {
+  color: var(--header-bg);
+}
+
+/* навігація і контакти */
+
+.site-nav .link {
+  color: var(--secondary-text-color);
+}
+
+.nav-link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .current {
+  color: var(--accent-color);
+}
+
+.contacts .contact-link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts .contact-link:hover,
+.contacts .contact-link:focus {
+  color: var(--accent-color);
+}
+
+/* секція hero */
+
+.hero {
+  background-color: var(--footer-bg);
+}
+
+.hero-title {
+  color: var(--header-bg);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* кнопки на обох сторінках */
+
+.button {
+  border-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.button.primary {
+  background-color: var(--accent-color);
+  color: var(--header-bg);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.button.secondary {
+  background-color: var(--secondary-bg);
+  color: var(--secondary-text-color);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: var(--accent-color);
+  color: var(--header-bg);
+}
+
+/* секції Наші переваги і Чим ми займаємося */
+
+.section {
+  background-color: var(--header-bg);
+}
+
+.section-title {
+  color: var(--secondary-text-color);
+  font-size: 36px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.features-title {
+  color: var(--secondary-text-color);
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features-text {
+  line-height: 1.71;
+}
+
+/* секція Команда */
+
+.section.team {
+  background-color: var(--secondary-bg);
+}
+
+.team-item {
+  background-color: var(--header-bg);
+}
+
+.team-name {
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  /* text-align: center; */
+}
+
+.team-title {
+  font-size: 16px;
+  line-height: 1.18;
+  /* text-align: center; */
+}
+
+/* секція Портфоліо */
+
+.project-title {
+  color: var(--secondary-text-color);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project-type {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--primary-text-color);
+}
+
+/* футер */
+
+.footer {
+  background-color: var(--footer-bg);
+}
+
+.address-link {
+  font-style: normal;
+  line-height: 1.71;
+}
+
+.address-link.primary {
+  color: var(--header-bg);
+}
+
+.address-link.secondary {
+  color: var(--text-footer-color);
+}
+
+.address-link.secondary:hover,
+.address-link.secondary:hover {
+  color: var(--accent-color);
+}
