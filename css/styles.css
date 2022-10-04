@@ -12,9 +12,9 @@
   --text-footer-color: rgba(255, 255, 255, 0.6);
 }
 
-* {
+/* * {
   outline: 1px solid tomato;
-}
+} */
 
 body {
   background-color: var(--header-bg);
@@ -72,7 +72,6 @@ ul {
   font-family: inherit;
   font-size: 16px;
   text-align: center;
-  text-align: center;
   cursor: pointer;
 }
 
@@ -85,12 +84,12 @@ ul {
 .header-items {
   display: flex;
   justify-content: space-between;
-  vertical-align: middle;
 }
 
 /* логотип */
 
-.logo {
+.logo-header {
+  display: block;
   margin-top: 24px;
   margin-right: 93px;
 
@@ -103,14 +102,6 @@ ul {
 
 .logo-black {
   color: var(--logo-black);
-}
-
-.logo-white {
-  color: var(--header-bg);
-}
-
-.logo.link {
-  display: block;
 }
 
 /* навігація і контакти */
@@ -138,8 +129,8 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.site-nav-link .link:hover,
-.site-nav-link .link:focus {
+.site-nav-link:hover,
+.site-nav-link:focus {
   color: var(--accent-color);
 }
 
@@ -176,8 +167,6 @@ ul {
 .hero {
   background-color: var(--footer-bg);
   text-align: center;
-  /* width: 1600px;
-  height: 600px; */
 }
 
 .hero-title {
@@ -199,7 +188,8 @@ ul {
 
   background-color: var(--accent-color);
   color: var(--header-bg);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   font-weight: 700;
   line-height: 1.8;
@@ -224,6 +214,18 @@ ul {
   text-align: center;
 }
 
+.features {
+  display: flex;
+}
+
+.features-item {
+  max-width: 270px;
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .features-title {
   margin-bottom: 10px;
   color: var(--secondary-text-color);
@@ -236,14 +238,43 @@ ul {
   line-height: 1.71;
 }
 
+.section.work {
+  padding-top: 0;
+}
+
+.work-list {
+  display: flex;
+}
+
+.work-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* секція Команда */
 
 .section.team {
   background-color: var(--secondary-bg);
 }
 
+.team-list {
+  display: flex;
+}
+
 .team-item {
   background-color: var(--header-bg);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
 .team-name {
@@ -263,8 +294,17 @@ ul {
 
 /* секція Портфоліо */
 
+.projects-filter {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.projects-item-button:not(:last-child) {
+  margin-right: 8px;
+}
+
 .projects-button {
-  margin-bottom: 50px;
   padding: 6px 22px;
   min-width: fit-content;
 
@@ -277,8 +317,43 @@ ul {
 
 .projects-button:hover,
 .projects-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.projects-button.current {
   background-color: var(--accent-color);
   color: var(--header-bg);
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-item {
+  flex-basis: ((100%-60px)-3);
+}
+
+.project-item:hover,
+.project-item:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.project-link {
+  display: block;
+}
+
+.project-img {
+  display: block;
+}
+
+.project-description {
+  padding: 20px 24px;
+  border: 1px solid var(--container-bg);
+  border-top: transparent;
+  background-color: var(--header-bg);
 }
 
 .project-title {
@@ -303,6 +378,25 @@ ul {
   background-color: var(--footer-bg);
 }
 
+.logo-footer {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: Raleway, sans-serif;
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-white {
+  color: var(--header-bg);
+}
+
+.address-item {
+  margin-bottom: 9px;
+}
+
 .address-link {
   font-style: normal;
   line-height: 1.71;
@@ -316,7 +410,12 @@ ul {
   color: var(--text-footer-color);
 }
 
+.address-link.primary:hover,
+.address-link.primary:focus {
+  color: var(--accent-color);
+}
+
 .address-link.secondary:hover,
-.address-link.secondary:hover {
+.address-link.secondary:focus {
   color: var(--accent-color);
 }
