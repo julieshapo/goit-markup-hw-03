@@ -36,10 +36,21 @@ body {
 h1,
 h2,
 h3,
-p,
-ul {
-  padding: 0;
+h4,
+h5,
+h6,
+p {
   margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
 }
 
 .list {
@@ -75,22 +86,30 @@ ul {
   cursor: pointer;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--header-bg);
+}
+
 /* хедер */
 .header {
   background-color: var(--header-bg);
   border-bottom: 1px solid var(--header-frame);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-items {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* логотип */
 
 .logo-header {
   display: block;
-  margin-top: 24px;
   margin-right: 93px;
 
   font-family: Raleway, sans-serif;
@@ -108,20 +127,20 @@ ul {
 
 .site-nav {
   display: flex;
+  align-items: center;
 }
 
 .site-nav-list {
   display: flex;
+  gap: 50px;
 }
 
-.site-nav-item:not(:last-child) {
+/* .site-nav-item:not(:last-child) {
   margin-right: 50px;
-}
+} */
 
 .site-nav-link.link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   color: var(--secondary-text-color);
   font-weight: 500;
@@ -140,16 +159,17 @@ ul {
 
 .contacts {
   display: flex;
+  gap: 50px;
 }
 
-.contact-item:not(:last-child) {
+/* .contact-item:not(:last-child) {
   margin-right: 50px;
-}
+} */
 
 .contact-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  /* padding-top: 32px;
+  padding-bottom: 32px; */
 
   color: var(--primary-text-color);
   font-weight: 500;
@@ -199,12 +219,6 @@ ul {
 
 /* секції Наші переваги і Чим ми займаємося */
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background-color: var(--header-bg);
-}
-
 .section-title {
   margin-bottom: 50px;
 
@@ -216,14 +230,11 @@ ul {
 
 .features {
   display: flex;
+  gap: 30px;
 }
 
 .features-item {
   max-width: 270px;
-}
-
-.features-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .features-title {
@@ -244,10 +255,7 @@ ul {
 
 .work-list {
   display: flex;
-}
-
-.work-item:not(:last-child) {
-  margin-right: 30px;
+  gap: 30px;
 }
 
 /* секція Команда */
@@ -258,6 +266,7 @@ ul {
 
 .team-list {
   display: flex;
+  gap: 30px;
 }
 
 .team-item {
@@ -265,10 +274,6 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.team-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .team-card {
@@ -297,12 +302,13 @@ ul {
 .projects-filter {
   display: flex;
   justify-content: center;
+  gap: 8px;
   padding-bottom: 50px;
 }
 
-.projects-item-button:not(:last-child) {
-  margin-right: 8px;
-}
+/* .projects-item-button:not(:last-child) {
+    margin-right: 8px;
+  } */
 
 .projects-button {
   padding: 6px 22px;
@@ -342,10 +348,6 @@ ul {
 }
 
 .project-link {
-  display: block;
-}
-
-.project-img {
   display: block;
 }
 
@@ -393,7 +395,7 @@ ul {
   color: var(--header-bg);
 }
 
-.address-item {
+.address-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
