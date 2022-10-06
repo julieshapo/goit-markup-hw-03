@@ -96,8 +96,8 @@ img {
 .header {
   background-color: var(--header-bg);
   border-bottom: 1px solid var(--header-frame);
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .header-items {
@@ -146,6 +146,8 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  /* padding-top: 7.5px;
+  padding-bottom: 7.5px; */
 }
 
 .site-nav-link:hover,
@@ -187,11 +189,15 @@ img {
 .hero {
   background-color: var(--footer-bg);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
   margin-bottom: 30px;
-  min-width: 696px;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 
   color: var(--header-bg);
   font-weight: 900;
